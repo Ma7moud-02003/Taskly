@@ -21,10 +21,6 @@ import { Comments } from './Comments/comment.entity';
 TypeOrmModule.forRootAsync({
      inject:[ConfigService],
     useFactory:(config:ConfigService)=>{   
-      console.log(process.env.PASSWORD);
-      console.log(process.env.DB_ENV);
-
-      
      return {
     type: 'postgres',
       url: process.env.DATABASE_URL,
@@ -35,7 +31,6 @@ TypeOrmModule.forRootAsync({
   };
     }
       }),
- 
   ],
   controllers: [AppController],
   providers: [AppService],

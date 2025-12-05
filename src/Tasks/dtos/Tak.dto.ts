@@ -14,7 +14,7 @@ title:string;
 @Length(10,10000)
 discreption:string;
 @IsString()
-@IsNotEmpty()
+@IsOptional()
 status:TaskStatusEnum; 
 @IsString()
 @IsNotEmpty()
